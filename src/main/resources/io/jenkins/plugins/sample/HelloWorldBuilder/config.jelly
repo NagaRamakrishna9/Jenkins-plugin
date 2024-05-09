@@ -1,0 +1,40 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <st:adjunct includes="webapp.js.script"/>
+    <style>
+        .custominput {
+        display:none
+        }
+    </style>
+    <f:entry title="${%Name}" field="name">
+        <f:textbox/>
+    </f:entry>
+
+    <f:entry title="${%Pipeline Name}" class="browser" field="browser" description="${%Select the browser}">
+        <f:select/>
+    </f:entry>
+
+    <f:entry title="${%Input Field}" field="inputField" class="custominput">
+        <f:textbox/>
+    </f:entry>
+
+    <!--    <f:entry title="${%Data}" field="data" description="${%Select the name}">-->
+    <!--        <f:select />-->
+    <!--    </f:entry>-->
+
+    <f:entry title="${%Server Address}">
+        <f:textbox value="192.168.1.187"/>
+    </f:entry>
+    <f:entry title="${%JWT Token}">
+        <f:textbox/>
+    </f:entry>
+
+
+    <!--    <f:advanced>-->
+    <!--        <f:entry title="${%French}" field="useFrench"-->
+    <!--                 description="${%FrenchDescr}">-->
+    <!--            <f:checkbox />-->
+    <!--        </f:entry>-->
+    <!--    </f:advanced>-->
+</j:jelly>
